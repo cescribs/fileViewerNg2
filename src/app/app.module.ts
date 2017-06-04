@@ -4,6 +4,9 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { HttpModule }    from '@angular/http';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 import { UserLoginComponent } from './user-login.component';
 import { AppComponent }  from './app.component';
@@ -16,6 +19,7 @@ import {FileViewerComponent} from './fileViewer.component';
   	BrowserModule,
   	FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     RouterModule.forRoot([
       {
         path: '',
