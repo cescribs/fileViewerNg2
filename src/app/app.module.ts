@@ -12,6 +12,7 @@ import { UserLoginComponent } from './user-login.component';
 import { AppComponent }  from './app.component';
 import { UsersComponent }  from './users.component';
 import { UserService } from './user.service';
+import {FileManagerService} from  './fileManager.service';
 import {FileViewerComponent} from './fileViewer.component';
 
 @NgModule({
@@ -41,7 +42,7 @@ import {FileViewerComponent} from './fileViewer.component';
     FileViewerComponent
      ],
   bootstrap:    [ AppComponent ],
-  providers: [UserService]
+  providers: [UserService,FileManagerService]
 })
 
 

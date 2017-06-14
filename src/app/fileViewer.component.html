@@ -1,6 +1,10 @@
 <h3>File Management</h3>
 <div class="grid grid-pad">
   FILE VIEWER
-  <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf">
+  <input type="file" (change)="onChange($event)" placeholder="Upload file" accept=".pdf">
   <button (click)="goBack()">Back</button>
+  <button (click)="downloadFile()">GetFILE</button>
+  <button (click)="addFile()">addFile</button>
+  <embed [src]="pdfUrl" type="application/pdf" width="100%" height="500px">
+
 </div>

@@ -7,7 +7,7 @@ import { User } from './user';
 
 @Injectable()
 export class UserService {
-  private usersUrl = 'api/users';  // URL to web api
+  private usersUrl = 'api/users';
   constructor(private http: Http) { }
   getUsers(): Promise<User[]> {
     return this.http.get(this.usersUrl)
@@ -34,7 +34,7 @@ export class UserService {
   }
 
   private handleError(error: any): Promise<any> {
-  console.error('An error occurred', error);
+    console.error('An error occurred', error);
   return Promise.reject(error.message || error);
  }
 }
